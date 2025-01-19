@@ -15,6 +15,16 @@ const Portfolio = () => {
     setDarkMode(isDarkMode);
   }, []);
 
+  useEffect(() => {
+    if (formStatus === 'success' || formStatus === 'error') {
+      const timer = setTimeout(() => {
+        setFormStatus('');
+      }, 3000); // Clear after 3 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [formStatus]);
+
   // Update localStorage when dark mode changes
   useEffect(() => {
     // Store the boolean as a string
