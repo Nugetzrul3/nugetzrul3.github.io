@@ -88,7 +88,7 @@ const Portfolio = () => {
             </button>
           </div>
           <div className="flex flex-col items-center text-center md:text-left md:flex-row md:justify-between md:items-center">
-            <h1 className="text-xl md:text-3xl font-bold transform hover:scale-105 transition-transform duration-300 mb-4 md:mb-0">
+            <h1 className="text-xl md:text-3xl font-bold transform hover:scale-102 transition-transform duration-300 mb-4 md:mb-0">
               Muhammad Salmaan Nagoormira
             </h1>
             <div className="flex gap-4 md:gap-6 items-center">
@@ -251,7 +251,7 @@ const Portfolio = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className={`${
                 darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-105 transition-all duration-300`}>
+              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
                 <h3 className="text-lg font-semibold">Web Browser Extensions</h3>
                 <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                   Developed web browser extensions using JavaScript and HTML/CSS to mobilize standard desktop wallet.
@@ -265,7 +265,7 @@ const Portfolio = () => {
               
               <div className={`${
                 darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-105 transition-all duration-300`}>
+              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
                 <h3 className="text-lg font-semibold">Android Cryptocurrency Miner</h3>
                 <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                   Developed Android app with Kotlin and C++ for mobile cryptocurrency mining.
@@ -279,7 +279,7 @@ const Portfolio = () => {
 
               <div className={`${
                 darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-105 transition-all duration-300`}>
+              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
                 <h3 className="text-lg font-semibold">Price Comparison Webstore</h3>
                 <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                   Built a price comparison website using Agile methodology with a team of 6 students.
@@ -289,7 +289,7 @@ const Portfolio = () => {
 
               <div className={`${
                 darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-105 transition-all duration-300`}>
+              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
                 <h3 className="text-lg font-semibold">Minecraft MITM Attack Prevention</h3>
                 <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                   Secured Minecraft server communication using CCA-secure protocol, implementing RSA encryption
@@ -307,7 +307,7 @@ const Portfolio = () => {
             <div className="space-y-6">
               <div className={`${
                 darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-105 transition-all duration-300`}>
+              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
                 <h3 className="text-lg font-semibold">Junior Software Engineer</h3>
                 <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
                   Freight Cyber Melbourne, AU — Nov 2024 - Present
@@ -316,7 +316,7 @@ const Portfolio = () => {
 
               <div className={`${
                 darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-105 transition-all duration-300`}>
+              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
                 <h3 className="text-lg font-semibold">Junior Python Developer</h3>
                 <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
                   CodePillow Seoul, South Korea — Dec 2021 - Feb 2023
@@ -329,7 +329,7 @@ const Portfolio = () => {
 
               <div className={`${
                 darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-105 transition-all duration-300`}>
+              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
                 <h3 className="text-lg font-semibold">Freelancer</h3>
                 <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
                   Upwork Australia — Aug 2021 - Sep 2021
