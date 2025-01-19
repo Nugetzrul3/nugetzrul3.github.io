@@ -92,11 +92,11 @@ const Portfolio = () => {
               Muhammad Salmaan Nagoormira
             </h1>
             <div className="flex gap-4 md:gap-6 items-center">
-              <a href="https://github.com/Nugetzrul3"
+              <a href="https://github.com/Nugetzrul3" target="_blank" rel="noopener noreferrer"
                 className="transform hover:scale-110 transition-transform duration-300">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://linkedin.com/in/salmaan-nagoormira"
+              <a href="https://linkedin.com/in/salmaan-nagoormira" target="_blank" rel="noopener noreferrer"
                 className="transform hover:scale-110 transition-transform duration-300">
                 <Linkedin className="w-6 h-6" />
               </a>
