@@ -71,14 +71,14 @@ const Portfolio = () => {
   };
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${
+    <div className={`min-h-screen w-screen overflow-x-hidden transition-colors duration-300 ${
       darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'
     }`}>
       {/* Header */}
-      <header className={`${
+      <header className={`w-full ${
         darkMode ? 'bg-gray-800' : 'bg-white'
       } shadow-sm transition-colors duration-300`}>
-        <div className="max-w-7xl mx-auto px-4 py-6">
+        <div className="w-full px-4 py-6">
           <div className="flex justify-end mb-4">
             <button
               onClick={() => setDarkMode(!darkMode)}
@@ -87,25 +87,25 @@ const Portfolio = () => {
               {darkMode ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
             </button>
           </div>
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <h1 className="text-3xl font-bold transform hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center text-center md:text-left md:flex-row md:justify-between md:items-center">
+            <h1 className="text-xl md:text-3xl font-bold transform hover:scale-105 transition-transform duration-300 mb-4 md:mb-0">
               Muhammad Salmaan Nagoormira
             </h1>
-            <div className="flex gap-4 mt-4 md:mt-0 items-center">
-              <a href="https://github.com/Nugetzrul3" 
-                 className="transform hover:scale-110 transition-transform duration-300">
+            <div className="flex gap-4 md:gap-6 items-center">
+              <a href="https://github.com/Nugetzrul3"
+                className="transform hover:scale-110 transition-transform duration-300">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://linkedin.com/in/salmaan-nagoormira" 
-                 className="transform hover:scale-110 transition-transform duration-300">
+              <a href="https://linkedin.com/in/salmaan-nagoormira"
+                className="transform hover:scale-110 transition-transform duration-300">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="mailto:salmaan_kmn@hotmail.com" 
-                 className="transform hover:scale-110 transition-transform duration-300">
+              <a href="mailto:salmaan_kmn@hotmail.com"
+                className="transform hover:scale-110 transition-transform duration-300">
                 <Mail className="w-6 h-6" />
               </a>
-              <a href="tel:0415442975" 
-                 className="transform hover:scale-110 transition-transform duration-300">
+              <a href="tel:0415442975"
+                className="transform hover:scale-110 transition-transform duration-300">
                 <Phone className="w-6 h-6" />
               </a>
             </div>
@@ -114,16 +114,16 @@ const Portfolio = () => {
       </header>
 
       {/* Navigation */}
-      <nav className={`${
+      <nav className={`w-full ${
         darkMode ? 'bg-gray-800' : 'bg-white'
-      } shadow-sm sticky top-0 z-10 transition-colors duration-300`}>
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex space-x-8">
+      } shadow-sm sticky top-0 z-10 transition-colors duration-300 overflow-x-auto`}>
+        <div className="w-full px-4">
+          <div className="flex space-x-4 md:space-x-8 min-w-max">
             {navigation.map((item) => (
               <button
                 key={item.id}
                 onClick={() => setActiveSection(item.id)}
-                className={`px-3 py-4 text-sm font-medium transition-colors duration-300 ${
+                className={`px-2 md:px-3 py-4 text-sm font-medium transition-colors duration-300 ${
                   activeSection === item.id
                     ? 'text-blue-600 border-b-2 border-blue-600'
                     : darkMode 
@@ -139,7 +139,7 @@ const Portfolio = () => {
       </nav>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 py-8">
+      <main className="w-full px-4 py-8">
         {/* About Section */}
         {activeSection === 'about' && (
           <section className="space-y-6 animate-fadeIn">
