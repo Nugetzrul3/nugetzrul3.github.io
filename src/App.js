@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Phone, ExternalLink, Sun, Moon } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, ExternalLink, Sun, Moon, FileText } from 'lucide-react';
 import './index.css';
 
 const Portfolio = () => {
@@ -102,6 +102,10 @@ const Portfolio = () => {
               <a href="https://linkedin.com/in/salmaan-nagoormira" target="_blank" rel="noopener noreferrer"
                 className="transform hover:scale-110 transition-transform duration-300">
                 <Linkedin className="w-6 h-6" />
+              </a>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
+                className="transform hover:scale-110 transition-transform duration-300">
+                <FileText className="w-6 h-6" />
               </a>
               <a href="mailto:salmaan_kmn@hotmail.com"
                 className="transform hover:scale-110 transition-transform duration-300">
