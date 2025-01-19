@@ -71,7 +71,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className={`min-h-screen w-screen overflow-x-hidden transition-colors duration-300 ${
+    <div className={`min-h-screen w-full overflow-x-hidden flex flex-col transition-colors duration-300 ${
       darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'
     }`}>
       {/* Header */}
@@ -90,6 +90,9 @@ const Portfolio = () => {
           <div className="flex flex-col items-center text-center md:text-left md:flex-row md:justify-between md:items-center">
             <h1 className="text-xl md:text-3xl font-bold transform hover:scale-102 transition-transform duration-300 mb-4 md:mb-0">
               Muhammad Salmaan Nagoormira
+              <h3 className='text-xl md:text-m text-gray-400'>
+              Software Engineer
+              </h3>
             </h1>
             <div className="flex gap-4 md:gap-6 items-center">
               <a href="https://github.com/Nugetzrul3" target="_blank" rel="noopener noreferrer"
@@ -117,7 +120,7 @@ const Portfolio = () => {
       <nav className={`w-full ${
         darkMode ? 'bg-gray-800' : 'bg-white'
       } shadow-sm sticky top-0 z-10 transition-colors duration-300 overflow-x-auto`}>
-        <div className="w-full px-4">
+        <div className="w-full px-4 flex justify-center"> {/* Added flex justify-center here */}
           <div className="flex space-x-4 md:space-x-8 min-w-max">
             {navigation.map((item) => (
               <button
@@ -143,7 +146,7 @@ const Portfolio = () => {
         {/* About Section */}
         {activeSection === 'about' && (
           <section className="space-y-6 animate-fadeIn">
-            <h2 className="text-2xl font-bold">About Me</h2>
+            <h2 className="text-2xl font-bold text-center">About Me</h2>
             <div className={`${
               darkMode ? 'bg-gray-800' : 'bg-white'
             } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
@@ -214,7 +217,7 @@ const Portfolio = () => {
         {/* Skills Section */}
         {activeSection === 'skills' && (
           <section className="space-y-6 animate-fadeIn">
-            <h2 className="text-2xl font-bold">Technical Skills</h2>
+            <h2 className="text-2xl font-bold text-center">Technical Skills</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className={`${
                 darkMode ? 'bg-gray-800' : 'bg-white'
@@ -247,7 +250,7 @@ const Portfolio = () => {
         {/* Projects Section */}
         {activeSection === 'projects' && (
           <section className="space-y-6 animate-fadeIn">
-            <h2 className="text-2xl font-bold">Featured Projects</h2>
+            <h2 className="text-2xl font-bold text-center">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className={`${
                 darkMode ? 'bg-gray-800' : 'bg-white'
@@ -303,7 +306,7 @@ const Portfolio = () => {
         {/* Experience Section */}
         {activeSection === 'experience' && (
           <section className="space-y-6 animate-fadeIn">
-            <h2 className="text-2xl font-bold">Professional Experience</h2>
+            <h2 className="text-2xl font-bold text-center">Professional Experience</h2>
             <div className="space-y-6">
               <div className={`${
                 darkMode ? 'bg-gray-800' : 'bg-white'
@@ -345,6 +348,7 @@ const Portfolio = () => {
         {/* Contact Form Section */}
         {activeSection === 'contact' && (
           <section className="space-y-6 animate-fadeIn">
+            <h2 className="text-2xl font-bold text-center">Get In Touch</h2>
             <div className={`${
               darkMode ? 'bg-gray-800' : 'bg-white'
             } shadow rounded-lg p-6 max-w-xl mx-auto`}>
@@ -410,6 +414,17 @@ const Portfolio = () => {
           </section>
         )}
       </main>
+      <footer className={`w-full py-4 mt-auto ${
+        darkMode ? 'bg-gray-800' : 'bg-white'
+      } border-t ${
+        darkMode ? 'border-gray-700' : 'border-gray-200'
+      }`}>
+        <div className="text-center">
+          <p className={`${
+            darkMode ? 'text-gray-400' : 'text-gray-500'
+          }`}>Made with ❤️ by Nugetzrul3</p>
+        </div>
+      </footer>
     </div>
   );
 };
