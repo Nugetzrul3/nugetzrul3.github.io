@@ -12,13 +12,11 @@ const Portfolio = () => {
     const savedMode = localStorage.getItem('darkMode');
     // Convert the string 'true'/'false' to actual boolean
     const isDarkMode = savedMode === 'true';
-    console.log('Setting initial dark mode to:', isDarkMode);
     setDarkMode(isDarkMode);
   }, []);
 
   // Update localStorage when dark mode changes
   useEffect(() => {
-    console.log('Updating dark mode to:', darkMode);
     // Store the boolean as a string
     localStorage.setItem('darkMode', String(darkMode));
     
