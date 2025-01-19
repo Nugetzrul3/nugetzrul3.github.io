@@ -19,7 +19,7 @@ const Portfolio = () => {
     if (formStatus === 'success' || formStatus === 'error') {
       const timer = setTimeout(() => {
         setFormStatus('');
-      }, 3000); // Clear after 3 seconds
+      }, 3000);
 
       return () => clearTimeout(timer);
     }
