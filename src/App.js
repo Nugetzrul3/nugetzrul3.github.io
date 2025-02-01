@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Phone, ExternalLink, Sun, Moon, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, Sun, Moon, FileText } from 'lucide-react';
 import './index.css';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('about');
   const [darkMode, setDarkMode] = useState(false);
   const [formStatus, setFormStatus] = useState('');
+
+  const [openSection, setOpenSection] = useState(null);
+
+  const toggleSection = (index) => {
+    setOpenSection(openSection === index ? null : index);
+  };
   
   // Initialize dark mode from localStorage  
   useEffect(() => {
@@ -69,6 +75,54 @@ const Portfolio = () => {
       setFormStatus('error');
     }
   };
+
+  const skills = ['FastAPI', 'PonyORM', 'SQLModel', 'SpringBoot', 'Flask', 'AWS Cloud Services', 'Bootstrap', 'ReactJS', 'NodeJS'];
+  const languages = ['Python', 'Java', 'JavaScript', 'HTML/CSS', 'C++', 'SQL', 'Kotlin'];
+  const interests = ['Photography', 'Cars', 'PC Building', 'PC Gaming', 'Lego', 'Gym', 'Drawing', "Rubik's Cube"];
+  const architectures = ['MVVM', 'MVC', 'MERN', 'Microservices'];
+
+  const experiences = [
+    {
+      title: "Junior Software Engineer",
+      company: "Freight Cyber (Melbourne, Australia)",
+      date: "Nov 2024 - Present",
+      details: [
+        "Integrated and tested APIs for the FCX Drive mobile application using NodeJS, Sequelize, and Express, allowing for seamless and fast communication between the application and the backend server.",
+        "Deployed REST API server to AWS EC2 instance using GitHub CI/CD workflows and AWS Secret Manager, ensuring that deployments are smooth and seamless while securely storing and retrieving API keys.",
+        "Integrated APIs and developed new, responsive, and user-friendly pages for the FCX Drive application using Kotlin and the MVVM architecture.",
+        "Worked with the client using the Agile methodology, ensuring that app requirements were met through daily standups and team coordination.",
+      ],
+    },
+    {
+      title: "Junior Python Developer",
+      company: "CodePillow (Seoul, South Korea)",
+      date: "Dec 2021 - Feb 2023",
+      details: [
+        "Built backend for an NFT game based in South Korea using FastAPI and SQLModel.",
+        "Gained 580 active users, with over 1 million games played and 9 thousand NFTs issued.",
+        "Connected a local node to a backend with database support for blockchain exploration, built with FastAPI and SQLModel.",
+        "Gained over 1000+ views and had more than 100 active users per day.",
+      ],
+    },
+    {
+      title: "Freelancer",
+      company: "Upwork Australia (Melbourne, Australia)",
+      date: "Aug 2021 - Sep 2021",
+      details: [
+        "Built a Telegram bot to prevent spam in a channel using Telegram JS API and SQLite database, preventing over 100 spammers from advertising malicious links.",
+        "Kept constant communication with the channel owner to ensure that the requirements were met.",
+      ],
+    },
+    {
+      title: "Freelancer",
+      company: "Centralex Exchange (Hong Kong, China)",
+      date: "Nov 2020",
+      details: [
+        "Built a verification bot for a Discord server to prevent spam using Discord.py and SQLite database. Blocked 300+ bot accounts from flooding the server.",
+        "Kept constant communication with the server owner to ensure that the requirements were met.",
+      ],
+    },
+  ];
 
   return (
     <div className={`min-h-screen w-full overflow-x-hidden flex flex-col transition-colors duration-300 ${
@@ -180,7 +234,7 @@ const Portfolio = () => {
                     <h3 className="font-semibold">Certifications</h3>
                     <ul className="mt-2 space-y-2">
                       <li className={darkMode ? 'text-gray-300' : 'text-gray-600'}>
-                        <a href='https://www.credly.com/badges/7cf7b04e-a2a6-4e65-aef1-1b65710d65af/linked_in_profile'>AWS Cloud Foundations</a>
+                      AWS Cloud Foundations — <a className='certLink' target='_blank' rel='noreferrer' href='https://www.credly.com/badges/7cf7b04e-a2a6-4e65-aef1-1b65710d65af/linked_in_profile'>View Certificate</a>
                       </li>
                     </ul>
                   </div>
@@ -188,7 +242,7 @@ const Portfolio = () => {
                   <div className="mt-6">
                     <h3 className="font-semibold">Interests</h3>
                     <div className="mt-2 flex flex-wrap gap-2">
-                      {['Photography', 'Cars', 'PC Building', 'PC Gaming', 'Lego', 'Gym', 'Drawing', "Rubik's Cube"].map((interest) => (
+                      {interests.map((interest) => (
                         <span
                           key={interest}
                           className={`px-3 py-1 rounded-full text-sm ${
@@ -221,34 +275,53 @@ const Portfolio = () => {
         {/* Skills Section */}
         {activeSection === 'skills' && (
           <section className="space-y-6 animate-fadeIn">
-            <h2 className="text-2xl font-bold text-center">Technical Skills</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className={`${
-                darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
-                <h3 className="font-semibold mb-4">Frameworks</h3>
-                <div className="flex flex-wrap gap-2">
-                  {['FastAPI', 'PonyORM', 'SQLModel', 'SpringBoot', 'Flask', 'AWS Cloud Services', 'Bootstrap', 'ReactJS', 'NodeJS'].map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm transform hover:scale-110 transition-transform duration-300">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className={`${
-                darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
-                <h3 className="font-semibold mb-4">Programming Languages</h3>
-                <div className="flex flex-wrap gap-2">
-                  {['Python', 'Java', 'JavaScript', 'HTML/CSS', 'C++', 'SQL', 'Kotlin'].map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm transform hover:scale-110 transition-transform duration-300">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+          <h2 className="text-2xl font-bold text-center">Technical Skills</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            {/* Frameworks Section */}
+            <div className={`${
+              darkMode ? 'bg-gray-800' : 'bg-white'
+            } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
+              <h3 className="font-semibold mb-4 text-center">Frameworks</h3>
+              <div className="flex flex-wrap gap-2 justify-center">
+                {skills.map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm transform hover:scale-110 transition-transform duration-300">
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
-          </section>
+        
+            {/* Architectures Section */}
+            <div className={`${
+              darkMode ? 'bg-gray-800' : 'bg-white'
+            } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
+              <h3 className="font-semibold mb-4 text-center">Architectures</h3>
+              <div className="flex flex-wrap gap-2 justify-center">
+                {architectures.map((arch) => (
+                  <span key={arch} className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm transform hover:scale-110 transition-transform duration-300">
+                    {arch}
+                  </span>
+                ))}
+              </div>
+            </div>
+        
+            {/* Programming Languages Section */}
+            <div className={`${
+              darkMode ? 'bg-gray-800' : 'bg-white'
+            } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
+              <h3 className="font-semibold mb-4 text-center">Programming Languages</h3>
+              <div className="flex flex-wrap gap-2 justify-center">
+                {languages.map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm transform hover:scale-110 transition-transform duration-300">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+        
+          </div>
+        </section>
         )}
 
         {/* Projects Section */}
@@ -264,10 +337,6 @@ const Portfolio = () => {
                   Developed web browser extensions using JavaScript and HTML/CSS to mobilize standard desktop wallet.
                   Open-source project with 7 stars, 10 forks, and 500+ active users.
                 </p>
-                <div className="mt-4 flex items-center gap-2">
-                  <Github className="w-4 h-4" />
-                  <span className={darkMode ? 'text-gray-400' : 'text-gray-500'}>500+ active users</span>
-                </div>
               </div>
               
               <div className={`${
@@ -276,12 +345,9 @@ const Portfolio = () => {
                 <h3 className="text-lg font-semibold">Android Cryptocurrency Miner</h3>
                 <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                   Developed Android app with Kotlin and C++ for mobile cryptocurrency mining.
-                  Open-source project with 4 stars, 5 forks, and 200+ downloads.
+                  Open-source project with 4 stars, 5 forks, and 200+ downloads and 4.5 star rating
+                  on Google play.
                 </p>
-                <div className="mt-4 flex items-center gap-2">
-                  <ExternalLink className="w-4 h-4" />
-                  <span className={darkMode ? 'text-gray-400' : 'text-gray-500'}>4.5-star rating on Google Play</span>
-                </div>
               </div>
 
               <div className={`${
@@ -290,7 +356,8 @@ const Portfolio = () => {
                 <h3 className="text-lg font-semibold">Price Comparison Webstore</h3>
                 <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                   Built a price comparison website using Agile methodology with a team of 6 students.
-                  Implemented MySQL database and deployed using Docker on AWS cloud.
+                  Created user stories, SRS, ERD, and designed and implemented MySQL database for the website backend,
+                  deploying the web app on AWS Beanstalk using Docker.
                 </p>
               </div>
 
@@ -299,8 +366,9 @@ const Portfolio = () => {
               } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
                 <h3 className="text-lg font-semibold">Minecraft MITM Attack Prevention</h3>
                 <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  Secured Minecraft server communication using CCA-secure protocol, implementing RSA encryption
-                  and SHA256-HMAC authentication.
+                  Secured Minecraft server communication using CCA-secure protocol to prevent packet sniffing, 
+                  implementing RSA encryption and SHA256-HMAC authentication. Successfully demonstrated
+                  this defense by utlising BurpSuite and WireShark to show encrypted packets.
                 </p>
               </div>
             </div>
@@ -310,43 +378,32 @@ const Portfolio = () => {
         {/* Experience Section */}
         {activeSection === 'experience' && (
           <section className="space-y-6 animate-fadeIn">
-            <h2 className="text-2xl font-bold text-center">Professional Experience</h2>
-            <div className="space-y-6">
-              <div className={`${
-                darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
-                <h3 className="text-lg font-semibold">Junior Software Engineer</h3>
-                <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                  Freight Cyber Melbourne, AU — Nov 2024 - Present
+          <h2 className="text-2xl font-bold text-center">Professional Experience</h2>
+          <h4 className="text-s italic text-center">Click each to learn more</h4>
+          <div className="space-y-6">
+            {experiences.map((experience, index) => (
+              <div
+                key={index}
+                className={`${
+                  darkMode ? "bg-gray-800" : "bg-white"
+                } experienceSect shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300 cursor-pointer`}
+                onClick={() => toggleSection(index)}
+              >
+                <h3 className="text-lg font-semibold">{experience.title}</h3>
+                <p className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-500"}`}>
+                  {experience.company} — {experience.date}
                 </p>
+                {openSection === index && (
+                  <ul className={`mt-4 space-y-2 ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
+                    {experience.details.map((detail, i) => (
+                      <li key={i}>• {detail}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
-
-              <div className={`${
-                darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
-                <h3 className="text-lg font-semibold">Junior Python Developer</h3>
-                <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                  CodePillow Seoul, South Korea — Dec 2021 - Feb 2023
-                </p>
-                <ul className={`mt-4 space-y-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  <li>• Built backend for NFT game using FastAPI and SQLModel, gaining 580 active users</li>
-                  <li>• Developed blockchain explorer with database support, achieving 1000+ daily views</li>
-                </ul>
-              </div>
-
-              <div className={`${
-                darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
-                <h3 className="text-lg font-semibold">Freelancer</h3>
-                <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                  Upwork Australia — Aug 2021 - Sep 2021
-                </p>
-                <p className={`mt-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  Developed Telegram bot for spam prevention using Telegram JS API and SQLite database.
-                </p>
-              </div>
-            </div>
-          </section>
+            ))}
+          </div>
+        </section>
         )}
 
         {/* Contact Form Section */}
