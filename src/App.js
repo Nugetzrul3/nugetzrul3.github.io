@@ -184,7 +184,7 @@ const Portfolio = () => {
               <button
                 key={item.id}
                 onClick={() => setActiveSection(item.id)}
-                className={`px-2 md:px-3 py-4 text-sm font-medium transition-colors duration-300 ${
+                className={`px-2 md:px-3 py-4 text-m font-medium transition-colors duration-300 ${
                   activeSection === item.id
                     ? 'text-blue-600 border-b-2 border-blue-600'
                     : darkMode 
