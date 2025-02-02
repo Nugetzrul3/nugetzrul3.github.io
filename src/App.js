@@ -89,7 +89,7 @@ const Portfolio = () => {
       details: [
         "Integrated and tested APIs for the FCX Drive mobile application using NodeJS, Sequelize, and Express, allowing for seamless and fast communication between the application and the backend server.",
         "Deployed REST API server to AWS EC2 instance using GitHub CI/CD workflows and AWS Secret Manager, ensuring that deployments are smooth and seamless while securely storing and retrieving API keys.",
-        "Integrated APIs and developed new, responsive, and user-friendly pages for the FCX Drive application using Kotlin and the MVVM architecture.",
+        "•	Used Kotlin to integrate APIs and develop new, responsive and user-friendly pages for the FCX Drive application while following the MVVM architecture to ensure coherent and readable code. Automated deployment using Firebase and CI/CD.",
         "Worked with the client using the Agile methodology, ensuring that app requirements were met through daily standups and team coordination.",
       ],
     },
