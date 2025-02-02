@@ -76,8 +76,8 @@ const Portfolio = () => {
     }
   };
 
-  const skills = ['FastAPI', 'PonyORM', 'SQLModel', 'SpringBoot', 'Flask', 'AWS Cloud Services', 'Bootstrap', 'ReactJS', 'NodeJS'];
-  const languages = ['Python', 'Java', 'JavaScript', 'HTML/CSS', 'C++', 'SQL', 'Kotlin'];
+  const skills = ['FastAPI', 'SQLModel', 'SpringBoot', 'Flask', 'AWS Cloud Services', 'Bootstrap', 'ReactJS', 'NodeJS', 'Sequelize', 'Express'];
+  const languages = ['Python', 'Java', 'JavaScript', 'HTML/CSS', 'C++', 'SQL', 'Kotlin', 'Rust'];
   const interests = ['Photography', 'Cars', 'PC Building', 'PC Gaming', 'Lego', 'Gym', 'Drawing', "Rubik's Cube"];
   const architectures = ['MVVM', 'MVC', 'MERN', 'Microservices'];
 
@@ -89,7 +89,7 @@ const Portfolio = () => {
       details: [
         "Integrated and tested APIs for the FCX Drive mobile application using NodeJS, Sequelize, and Express, allowing for seamless and fast communication between the application and the backend server.",
         "Deployed REST API server to AWS EC2 instance using GitHub CI/CD workflows and AWS Secret Manager, ensuring that deployments are smooth and seamless while securely storing and retrieving API keys.",
-        "Used Kotlin to integrate APIs and develop new, responsive and user-friendly pages for the FCX Drive application while following the MVVM architecture to ensure coherent and readable code. Automated deployment using Firebase and CI/CD.",
+        "Used Java/Kotlin to integrate APIs and develop new, responsive and user-friendly pages for the FCX Drive application while following the MVVM architecture to ensure coherent and readable code. Automated deployment using Firebase and CI/CD.",
         "Worked with the client using the Agile methodology, ensuring that app requirements were met through daily standups and team coordination.",
       ],
     },
@@ -123,6 +123,41 @@ const Portfolio = () => {
       ],
     },
   ];
+
+  const projects = [
+    {
+        title: "Web Browser Extensions",
+        details: [
+            "Developed web browser extensions using JavaScript and HTML/CSS to mobilise standard desktop wallet for convenience.",
+            "Created project as an open-source project to allow other cryptocurrency projects to mobilise their desktop wallets.",
+            "Received 7 stars and has 10 forks and over 500+ active users on the Chrome Web Store."
+        ]
+    },
+    {
+        title: "Android Cryptocurrency Miner",
+        details: [
+            "Developed Android app with Kotlin and C++ so Android phones can mine cryptocurrencies as opposed to using computers.",
+            "Created project as an open-source project so that other cryptocurrencies can use the code as a reference for their apps.",
+            "Received 4 stars and has 5 forks, gaining 200+ downloads and a 4.5-star rating on the Google App Store."
+        ]
+    },
+    {
+        title: "Price Comparison Webstore (RMIT)",
+        details: [
+            "Built a price comparison website from an interview with the product owner using Agile model with a group of 6 students.",
+            "Created user stories, SRS, ERD, and designed and implemented MySQL database for the website backend.",
+            "Successfully deployed and hosted the website on a public domain using a Docker environment hosted on AWS cloud."
+        ]
+    },
+    {
+        title: "Minecraft Man-in-the-Middle Attack Prevention (RMIT)",
+        details: [
+            "Secured communication between Minecraft server and MCPI client using a CCA-secure protocol to prevent packet sniffing.",
+            "Modified Minecraft Server files and MCPI library by implementing RSA encryption and SHA256-HMAC authentication.",
+            "Successfully demonstrated implementation secureness using BurpSuite by attacking the connection using MITM attacks."
+        ]
+    }
+];
 
   return (
     <div className={`min-h-screen w-full overflow-x-hidden flex flex-col transition-colors duration-300 ${
@@ -329,48 +364,18 @@ const Portfolio = () => {
           <section className="space-y-6 animate-fadeIn">
             <h2 className="text-2xl font-bold text-center">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projects.map((project) => (
               <div className={`${
                 darkMode ? 'bg-gray-800' : 'bg-white'
               } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
-                <h3 className="text-lg font-semibold">Web Browser Extensions</h3>
-                <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  Developed web browser extensions using JavaScript and HTML/CSS to mobilize standard desktop wallet.
-                  Open-source project with 7 stars, 10 forks, and 500+ active users.
-                </p>
+                <h3 className="text-lg font-semibold">{project.title}</h3>
+                <ul className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  {project.details.map((detail) => (
+                    <li>• {detail}</li>
+                  ))}
+                </ul>
               </div>
-              
-              <div className={`${
-                darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
-                <h3 className="text-lg font-semibold">Android Cryptocurrency Miner</h3>
-                <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  Developed Android app with Kotlin and C++ for mobile cryptocurrency mining.
-                  Open-source project with 4 stars, 5 forks, and 200+ downloads and 4.5 star rating
-                  on Google play.
-                </p>
-              </div>
-
-              <div className={`${
-                darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
-                <h3 className="text-lg font-semibold">Price Comparison Webstore</h3>
-                <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  Built a price comparison website using Agile methodology with a team of 6 students.
-                  Created user stories, SRS, ERD, and designed and implemented MySQL database for the website backend,
-                  deploying the web app on AWS Beanstalk using Docker.
-                </p>
-              </div>
-
-              <div className={`${
-                darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow rounded-lg p-6 transform hover:scale-102 transition-all duration-300`}>
-                <h3 className="text-lg font-semibold">Minecraft MITM Attack Prevention</h3>
-                <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  Secured Minecraft server communication using CCA-secure protocol to prevent packet sniffing, 
-                  implementing RSA encryption and SHA256-HMAC authentication. Successfully demonstrated
-                  this defense by utlising BurpSuite and WireShark to show encrypted packets.
-                </p>
-              </div>
+            ))}
             </div>
           </section>
         )}
