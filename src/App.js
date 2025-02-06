@@ -212,24 +212,26 @@ const Portfolio = () => {
       {/* Navigation */}
       <nav className={`w-full ${
         darkMode ? 'bg-gray-800' : 'bg-white'
-      } shadow-sm sticky top-0 z-10 transition-colors duration-300 overflow-x-auto`}>
-        <div className="w-full px-4 flex justify-center"> {/* Added flex justify-center here */}
-          <div className="flex space-x-4 md:space-x-8 min-w-max">
-            {navigation.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => setActiveSection(item.id)}
-                className={`px-2 md:px-3 py-4 text-m font-medium transition-colors duration-300 ${
-                  activeSection === item.id
-                    ? 'text-blue-600 border-b-2 border-blue-600'
-                    : darkMode 
-                      ? 'text-gray-400 hover:text-gray-200'
-                      : 'text-gray-500 hover:text-gray-700'
-                }`}
-              >
-                {item.name}
-              </button>
-            ))}
+      } shadow-sm sticky top-0 z-10 transition-colors duration-300`}>
+        <div className="w-full overflow-x-auto scrollbar-hide">
+          <div className="flex justify-center px-4 min-w-max">
+            <div className="flex space-x-2 md:space-x-8">
+              {navigation.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => setActiveSection(item.id)}
+                  className={`whitespace-nowrap px-3 py-4 text-sm md:text-base font-medium transition-colors duration-300 ${
+                    activeSection === item.id
+                      ? 'text-blue-600 border-b-2 border-blue-600'
+                      : darkMode 
+                        ? 'text-gray-400 hover:text-gray-200'
+                        : 'text-gray-500 hover:text-gray-700'
+                  }`}
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </nav>
