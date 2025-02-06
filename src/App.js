@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Phone, Sun, Moon, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, Sun, Moon } from 'lucide-react';
+import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './index.css';
 
 const Portfolio = () => {
@@ -194,7 +196,7 @@ const Portfolio = () => {
               </a>
               <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
                 className="transform hover:scale-110 transition-transform duration-300">
-                <FileText className="w-6 h-6" />
+                <FontAwesomeIcon icon={faFilePdf} className="w-6 h-6" />
               </a>
               <a href="mailto:salmaan_kmn@hotmail.com"
                 className="transform hover:scale-110 transition-transform duration-300">
