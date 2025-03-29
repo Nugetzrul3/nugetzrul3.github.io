@@ -259,11 +259,11 @@ const Portfolio = () => {
                     <h3 className="font-semibold">Education</h3>
                     <ul className="mt-2 space-y-2">
                       <li className={`flex justify-between items-center ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                        <span>RMIT, Melbourne — Bachelor of Computer Science</span>
+                        <span>RMIT, Melbourne — Bach. Computer Science w/ Distinction</span>
                         <span className="ml-4">2022-2024</span>
                       </li>
                       <li className={`flex justify-between items-center ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                        <span>Werribee Secondary College, Victoria — VCE (81.75 ATAR)</span>
+                        <span>Werribee Secondary College, Victoria — VCE</span>
                         <span className="ml-4">2021</span>
                       </li>
                     </ul>
@@ -492,7 +492,7 @@ const Portfolio = () => {
         <div className="text-center">
           <p className={`${
             darkMode ? 'text-gray-400' : 'text-gray-500'
-          }`}>Made with ❤️ by Nugetzrul3</p>
+          }`}>Made with ❤️ by <a href="https://github.com/Nugetzrul3/nugetzrul3.github.io">Nugetzrul3</a></p>
         </div>
       </footer>
     </div>
