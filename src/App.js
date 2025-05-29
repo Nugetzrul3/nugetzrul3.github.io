@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDarkMode } from './hooks/useDarkMode';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
+import FloatingToggle from './components/FloatingToggle';
 import About from './components/sections/About';
 import Stats from './components/sections/Stats';
 import Skills from './components/sections/Skills';
@@ -49,7 +50,7 @@ const App = () => {
     <div className={`min-h-screen w-full overflow-x-hidden flex flex-col transition-colors duration-300 ${
       darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'
     }`}>
-      <Header darkMode={darkMode} toggleDarkMode={() => setDarkMode(!darkMode)} />
+      <Header darkMode={darkMode} />
       <Navigation 
         activeSection={activeSection} 
         setActiveSection={setActiveSection} 
@@ -59,6 +60,9 @@ const App = () => {
         {renderActiveSection()}
       </main>
       <Footer darkMode={darkMode} />
+      
+      {/* Floating Dark Mode Toggle */}
+      <FloatingToggle darkMode={darkMode} toggleDarkMode={() => setDarkMode(!darkMode)} />
     </div>
   );
 };

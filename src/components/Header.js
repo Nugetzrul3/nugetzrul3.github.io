@@ -1,27 +1,14 @@
-import { Github, Linkedin, Mail, Phone, Sun, Moon } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { personalInfo } from '../data/portfolio-data';
 
-const Header = ({ darkMode, toggleDarkMode }) => {
+const Header = ({ darkMode }) => {
   return (
     <header className={`w-full ${
       darkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
     } shadow-sm border-b transition-colors duration-300`}>
-      <div className="w-full px-4 py-6">
-        <div className="flex justify-end mb-4">
-          <button
-            onClick={toggleDarkMode}
-            className={`p-2 rounded-full transition-colors duration-300 ${
-              darkMode 
-                ? 'hover:bg-gray-700 text-yellow-400' 
-                : 'hover:bg-gray-100 text-gray-600'
-            }`}
-            aria-label="Toggle dark mode"
-          >
-            {darkMode ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
-          </button>
-        </div>
+      <div className="w-full px-4 py-8">
         <div className="flex flex-col items-center text-center md:text-left md:flex-row md:justify-between md:items-center">
           <div>
             <h1 className="text-2xl md:text-3xl font-bold mb-2">
@@ -33,7 +20,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
               {personalInfo.title}
             </h2>
           </div>
-          <div className="flex gap-4 md:gap-6 items-center mt-4 md:mt-0">
+          <div className="flex gap-4 md:gap-6 items-center mt-6 md:mt-0">
             <SocialLink href={personalInfo.github} aria-label="GitHub">
               <Github className="w-6 h-6" />
             </SocialLink>
