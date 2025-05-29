@@ -40,29 +40,6 @@ export const skills = {
   architectures: ['MVVM', 'MVC', 'MERN', 'Microservices']
 };
 
-export const skillsWithProficiency = {
-  languages: [
-    { name: 'Python', level: 90 },
-    { name: 'JavaScript', level: 85 },
-    { name: 'Java', level: 80 },
-    { name: 'SQL', level: 85 },
-    { name: 'HTML/CSS', level: 90 },
-    { name: 'Kotlin', level: 75 },
-    { name: 'C++', level: 70 },
-    { name: 'Rust', level: 60 }
-  ],
-  frameworks: [
-    { name: 'ReactJS', level: 85 },
-    { name: 'FastAPI', level: 90 },
-    { name: 'NodeJS', level: 80 },
-    { name: 'Flask', level: 85 },
-    { name: 'SpringBoot', level: 75 },
-    { name: 'Express', level: 80 },
-    { name: 'AWS Cloud Services', level: 70 },
-    { name: 'Bootstrap', level: 85 }
-  ]
-};
-
 export const quickStats = [
   {
     number: '2',
