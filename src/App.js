@@ -275,6 +275,9 @@ const Portfolio = () => {
                       <li className={darkMode ? 'text-gray-300' : 'text-gray-600'}>
                       AWS Cloud Foundations — <a className='certLink' target='_blank' rel='noreferrer' href='https://www.credly.com/badges/7cf7b04e-a2a6-4e65-aef1-1b65710d65af/linked_in_profile'>View Certificate</a>
                       </li>
+                      <li className={darkMode ? 'text-gray-300' : 'text-gray-600'}>
+                      TryHackMe Pre Security — <a className='certLink' target='_blank' rel='noreferrer' href='https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-W5CFOXKJFX.pdf'>View Certificate</a>
+                      </li>
                     </ul>
                   </div>
 
