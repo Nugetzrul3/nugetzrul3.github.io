@@ -117,29 +117,9 @@ export const experiences = [
 
 export const projects = [
   {
-    title: "Web Browser Extensions",
-    category: "Open Source",
-    technologies: ["JavaScript", "HTML/CSS", "Chrome API"],
-    details: [
-      "Developed web browser extensions using JavaScript and HTML/CSS to mobilise standard desktop wallet for convenience.",
-      "Created project as an open-source project to allow other cryptocurrency projects to mobilise their desktop wallets.",
-      "Received 7 stars and has 10 forks and over 500+ active users on the Chrome Web Store."
-    ]
-  },
-  {
-    title: "Android Cryptocurrency Miner",
-    category: "Mobile Development",
-    technologies: ["Kotlin", "C++", "Android SDK"],
-    details: [
-      "Developed Android app with Kotlin and C++ so Android phones can mine cryptocurrencies as opposed to using computers.",
-      "Created project as an open-source project so that other cryptocurrencies can use the code as a reference for their apps.",
-      "Received 4 stars and has 5 forks, gaining 200+ downloads and a 4.5-star rating on the Google App Store."
-    ]
-  },
-  {
     title: "Price Comparison Webstore",
-    category: "Academic Project",
-    technologies: ["MySQL", "Docker", "AWS", "Agile"],
+    category: ["Academic Project", "Full-stack"],
+    technologies: ["MySQL", "Docker", "AWS", "Agile", "Springboot"],
     details: [
       "Built a price comparison website from an interview with the product owner using Agile model with a group of 6 students.",
       "Created user stories, SRS, ERD, and designed and implemented MySQL database for the website backend.",
@@ -147,13 +127,80 @@ export const projects = [
     ]
   },
   {
+    title: "Android Cryptocurrency Miner",
+    category: ["Mobile Development", "Open Source"],
+    technologies: ["Kotlin", "C++", "Android SDK"],
+    githubUrl: "https://github.com/Nugetzrul3/Sugarchain-Android-Miner",
+    details: [
+      "Developed Android app with Kotlin and C++ so Android phones can mine cryptocurrencies as opposed to using computers.",
+      "Created project as an open-source project so that other cryptocurrencies can use the code as a reference for their apps.",
+      "Received 4 stars and has 5 forks, gaining 200+ downloads and a 4.5-star rating on the Google App Store."
+    ]
+  },
+  {
+    title: "TaskManager CLI",
+    category: ["Open Source", "CLI Application"],
+    technologies: ["Rust", "Serde", "JSON", "File I/O"],
+    githubUrl: "https://github.com/Nugetzrul3/TaskManager-Rust-CLI",
+    details: [
+      "Built a command-line task management application in Rust for efficient personal productivity tracking with persistent storage.",
+      "Implemented JSON-based data persistence using Serde for serialization/deserialization, enabling tasks to be saved to and loaded from files.",
+      "Designed clean CLI interface for task CRUD operations while learning Rust fundamentals including ownership, error handling, and the crate ecosystem."
+    ]
+  },
+  {
+    title: "AOKChain SwapIndex",
+    category: ["Open Source", "Cryptocurrency"],
+    technologies: ["Python", "FastAPI", "SQLModel", "Blockchain APIs"],
+    githubUrl: "https://github.com/AokChain/SwapIndex",
+    details: [
+      "Collaborated with AOKChain team to build an API service that indexes and tracks token swap transactions on the AOK blockchain.",
+      "Designed REST endpoints using FastAPI and SQLModel for efficient querying of swap data and transaction history.",
+      "Implemented database architecture to store and organize swap events, enabling real-time analytics for the AOK ecosystem."
+    ]
+  },
+  {
+    title: "Telegram Tip-Bot",
+    category: ["Open Source", "Bot Development"],
+    technologies: ["Telegram API", "Python", "REST API"],
+    githubUrl: "https://github.com/Nugetzrul3/SugarchainTGBot",
+    details: [
+      "Developed a Telegram bot enabling cryptocurrency tipping within chat communities using Sugarchain (SUGAR).",
+      "Implemented REST API integration with Sugarchain network for real-time balance checking and transaction processing.",
+      "Built daemon-free architecture using python-bitcoin-utils library for lightweight wallet operations and transaction signing."
+    ]
+  },
+  {
+    title: "Web Browser Extensions",
+    category: ["Open Source", "Extension Development"],
+    technologies: ["JavaScript", "HTML/CSS", "Chrome API"],
+    githubUrl: "https://github.com/Nugetzrul3/Sugarchain-Chrome-Wallet",
+    details: [
+      "Developed web browser extensions using JavaScript and HTML/CSS to mobilise standard desktop wallet for convenience.",
+      "Created project as an open-source project to allow other cryptocurrency projects to mobilise their desktop wallets.",
+      "Received 7 stars and has 10 forks and over 500+ active users on the Chrome Web Store."
+    ]
+  },
+  {
+    title: "CPU GUI Miner",
+    category: ["Open Source", "Desktop Application"],
+    technologies: ["Python", "GUI Framework", "Process Management"],
+    githubUrl: "https://github.com/Nugetzrul3/CPU-GUI-Miner",
+    details: [
+      "Developed a cross-platform GUI application for CPU cryptocurrency mining supporting 20+ mining algorithms including yespower, yescrypt, and argon2d variants.",
+      "Integrated RickillerZ's cpuminer backend with custom GUI wrapper, enabling both solo and pool mining configurations.",
+      "Implemented process management and configuration persistence, allowing users to save mining setups and safely terminate background processes."
+    ]
+  },
+  {
     title: "Minecraft MITM Attack Prevention",
-    category: "Security Research",
+    category: ["Security Research", "Cryptography"],
     technologies: ["RSA Encryption", "SHA256-HMAC", "BurpSuite"],
     details: [
       "Secured communication between Minecraft server and MCPI client using a CCA-secure protocol to prevent packet sniffing.",
       "Modified Minecraft Server files and MCPI library by implementing RSA encryption and SHA256-HMAC authentication.",
       "Successfully demonstrated implementation secureness using BurpSuite by attacking the connection using MITM attacks."
     ]
-  }
+  },
+  
 ];
