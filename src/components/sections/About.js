@@ -1,4 +1,4 @@
-import { personalInfo, education, certifications, interests } from '../../data/portfolio-data';
+import { personalInfo, education, certifications, interests, currentProjects } from '../../data/portfolio-data';
 
 const About = ({ darkMode }) => {
   return (
@@ -90,13 +90,61 @@ const About = ({ darkMode }) => {
             </div>
           </div>
 
-          <div className="lg:w-1/3 flex justify-center items-start">
+          <div className="lg:w-1/3 space-y-6 flex flex-col items-center">
             <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-lg">
               <img
                 src={personalInfo.image}
                 alt={personalInfo.name}
                 className="w-full h-full object-cover"
               />
+            </div>
+
+            {/* Currently Working On Section */}
+            <div className="w-full max-w-80">
+              <h3 className="text-lg font-semibold mb-3 flex items-center justify-center">
+                <span className="w-2 h-5 bg-orange-500 rounded-full mr-2"></span>
+                Currently Working On
+              </h3>
+              <div className="space-y-3">
+                {currentProjects.map((project, index) => (
+                  <button
+                    key={index}
+                    onClick={() => window.open(project.githubUrl, '_blank')}
+                    className={`w-full p-4 rounded-lg text-left transition-all duration-200 transform hover:scale-105 hover:shadow-md ${
+                      darkMode 
+                        ? 'bg-gray-700 hover:bg-gray-600 border border-gray-600' 
+                        : 'bg-gray-50 hover:bg-gray-100 border border-gray-200'
+                    }`}
+                  >
+                    <div className="flex justify-between items-start mb-2">
+                      <h4 className={`font-medium text-sm ${
+                        darkMode ? 'text-white' : 'text-gray-900'
+                      }`}>
+                        {project.title}
+                      </h4>
+                      <span className={`text-xs px-2 py-1 rounded-full ${
+                        darkMode 
+                          ? 'bg-orange-900 text-orange-300' 
+                          : 'bg-orange-100 text-orange-700'
+                      }`}>
+                        {project.status}
+                      </span>
+                    </div>
+                    <p className={`text-xs leading-relaxed ${
+                      darkMode ? 'text-gray-400' : 'text-gray-600'
+                    }`}>
+                      {project.description}
+                    </p>
+                    <div className="flex items-center justify-end mt-2">
+                      <span className={`text-xs ${
+                        darkMode ? 'text-gray-500' : 'text-gray-400'
+                      }`}>
+                        View on GitHub →
+                      </span>
+                    </div>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>

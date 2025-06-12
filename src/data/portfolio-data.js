@@ -34,6 +34,16 @@ export const certifications = [
   }
 ];
 
+// Add this new section for currently working projects
+export const currentProjects = [
+  {
+    title: "RustySync",
+    description: "Multi-platform file synchronization tool built with Rust",
+    githubUrl: "https://github.com/Nugetzrul3/RustySync",
+    status: "In Development"
+  },
+];
+
 export const skills = {
   frameworks: ['FastAPI', 'SQLModel', 'SpringBoot', 'Flask', 'AWS Cloud Services', 'Bootstrap', 'ReactJS', 'NodeJS', 'Sequelize', 'Express'],
   languages: ['Python', 'Java', 'JavaScript', 'HTML/CSS', 'C++', 'SQL', 'Kotlin', 'Rust'],
