@@ -73,6 +73,7 @@ const Contact = ({ darkMode }) => {
             </label>
             <textarea
               name="message"
+              data-gramm='false'
               required
               rows="5"
               className={`w-full px-4 py-3 rounded-lg border transition-all duration-300 resize-none ${
