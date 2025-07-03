@@ -16,12 +16,6 @@ export const useContactForm = () => {
     e.preventDefault();
     const form = e.target;
     
-    if (form.name.value.toLowerCase().includes("saranya")) {
-      window.open("https://my-chellam.vercel.app");
-      setFormStatus('success');
-      return;
-    }
-    
     try {
       setFormStatus('sending');
       const response = await fetch('https://formspree.io/f/xdkkrldw', {
