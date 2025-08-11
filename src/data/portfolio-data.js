@@ -85,10 +85,10 @@ export const experiences = [
     location: "Melbourne, Australia",
     date: "Nov 2024 - Present",
     details: [
-      "Developed and tested APIs for the FCX Drive mobile application using NodeJS, Sequelize, and Express, allowing for seamless and fast communication between the application and the backend server.",
-      "Deployed REST API server to AWS EC2 instance using GitHub CI/CD workflows and AWS Secret Manager, ensuring that deployments are smooth and seamless while securely storing and retrieving API keys.",
-      "Used Java/Kotlin to integrate APIs and develop new, responsive and user-friendly pages for the FCX Drive application while following the MVVM architecture to ensure coherent and readable code. Automated deployment using Firebase and CI/CD.",
-      "Worked with the client using the Agile methodology, ensuring that app requirements were met through daily standups and team coordination."
+      "Developing responsive web applications using ReactJS and Python backend services, expanding the FCX platform from mobile-first to full-stack web solutions.",
+      "Built and maintained APIs using NodeJS, Sequelize and Express for both mobile and web applications, ensuring seamless communication across platforms.",
+      "Previously developed mobile application features using Java/Kotlin following MVVM architecture, gaining experience across the full technology stack.",
+      "Deployed applications to AWS EC2 using GitHub CI/CD workflows and AWS secret manager, managing both web and mobile deployment pipelines."
     ]
   },
   {
