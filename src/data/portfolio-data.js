@@ -85,10 +85,11 @@ export const experiences = [
     location: "Melbourne, Australia",
     date: "Nov 2024 - Present",
     details: [
-      "Developing responsive web applications using ReactJS and Python backend services, expanding the FCX platform from mobile-first to full-stack web solutions.",
-      "Built and maintained APIs using NodeJS, Sequelize and Express for both mobile and web applications, ensuring seamless communication across platforms.",
-      "Previously developed mobile application features using Java/Kotlin following MVVM architecture, gaining experience across the full technology stack.",
-      "Deployed applications to AWS EC2 using GitHub CI/CD workflows and AWS secret manager, managing both web and mobile deployment pipelines."
+      "Developing responsive web applications using ReactJS and Python backend services, expanding the FCX platform from mobile-first to full-stack web solutions, ensuring cross-platform compatibility and delivering seamless user experiences across desktop and mobile browsers.",
+      "Built and maintained RESTful APIs using NodeJS, Sequelize and Express for both mobile and web applications, implementing robust authentication, data validation, and error handling to ensure reliable and fast communication between frontend applications and backend servers.",
+      "Previously developed mobile application features using Java/Kotlin following MVVM architecture, integrating APIs and creating responsive, user-friendly interfaces. This mobile development experience provided valuable insights that now inform full-stack architectural decisions and cross-platform compatibility considerations.",
+      "Deployed applications to AWS EC2 using GitHub CI/CD workflows and AWS secret manager, managing both web and mobile deployment pipelines. Automated build processes and implemented secure storage and retrieval of API keys, ensuring smooth and seamless deployments across all platforms.",
+      "Collaborated with clients using Agile methodology to ensure platform requirements are met and exceed standards. Participated in daily standups with the development team to track progress, identify blockers, and establish issue priorities for continuous improvement."
     ]
   },
   {
