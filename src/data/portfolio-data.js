@@ -37,15 +37,25 @@ export const certifications = [
 // Add this new section for currently working projects
 export const currentProjects = [
   {
-    title: "RustySync",
-    description: "Multi-platform file synchronization tool built with Rust",
-    githubUrl: "https://github.com/Nugetzrul3/RustySync",
+    title: "Cosmic Companion",
+    description: "A cross-platform app that uses NASA's APIs to fetch space content, built with React, React Native and Express + Apollo.",
+    githubUrls: [
+      { label: "Backend", url: "https://github.com/Nugetzrul3/cosmic-companion-backend" },
+      { label: "Web", url: "https://github.com/Nugetzrul3/cosmic-companion-web" },
+      { label: "Mobile", url: "https://github.com/Nugetzrul3/cosmic-companion-mobile" }
+    ],
     status: "In Development"
   },
+  {
+    title: "RustySync",
+    description: "A Rust-based file synchronization tool with real-time detection, hashing, and sync server built with Actix-web.",
+    githubUrls: "https://github.com/Nugetzrul3/RustySync",
+    status: "MVP Released"
+  }
 ];
 
 export const skills = {
-  frameworks: ['FastAPI', 'SQLModel', 'SpringBoot', 'Flask', 'AWS Cloud Services', 'Bootstrap', 'ReactJS', 'NodeJS', 'Sequelize', 'Express'],
+  frameworks: ['FastAPI', 'SQLModel', 'SpringBoot', 'Flask', 'AWS Cloud Services', 'Bootstrap', 'ReactJS', 'NodeJS', 'Sequelize', 'Express', 'GraphQL', 'Actix-Web'],
   languages: ['Python', 'Java', 'JavaScript', 'HTML/CSS', 'C++', 'SQL', 'Kotlin', 'Rust'],
   architectures: ['MVVM', 'MVC', 'MERN', 'Microservices']
 };
@@ -146,6 +156,18 @@ export const projects = [
       "Developed Android app with Kotlin and C++ so Android phones can mine cryptocurrencies as opposed to using computers.",
       "Created project as an open-source project so that other cryptocurrencies can use the code as a reference for their apps.",
       "Received 4 stars and has 5 forks, gaining 200+ downloads and a 4.5-star rating on the Google App Store."
+    ]
+  },
+  {
+    title: "RustySync",
+    category: ["Open Source", "Systems Programming"],
+    technologies: ["Rust", "Actix-web", "SQLite", "File I/O", "Concurrency"],
+    githubUrl: "https://github.com/Nugetzrul3/RustySync",
+    details: [
+      "Built a lightweight, real-time file synchronization tool in Rust to explore systems programming concepts such as performance, safety, and concurrency.",
+      "Implemented sub-100ms file change detection using Rust’s file watcher and ensured data integrity with content-based hashing (BLAKE3).",
+      "Designed persistent state tracking with SQLite to allow accurate recovery and sync continuity after restarts.",
+      "Developed a lightweight HTTP server with Actix-web to handle sync requests, supporting multi-client setups and future scalability."
     ]
   },
   {

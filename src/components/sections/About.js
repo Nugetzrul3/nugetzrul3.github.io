@@ -106,44 +106,83 @@ const About = ({ darkMode }) => {
                 Currently Working On
               </h3>
               <div className="space-y-3">
-                {currentProjects.map((project, index) => (
-                  <button
-                    key={index}
-                    onClick={() => window.open(project.githubUrl, '_blank')}
-                    className={`w-full p-4 rounded-lg text-left transition-all duration-200 transform hover:scale-105 hover:shadow-md ${
-                      darkMode 
-                        ? 'bg-gray-700 hover:bg-gray-600 border border-gray-600' 
-                        : 'bg-gray-50 hover:bg-gray-100 border border-gray-200'
-                    }`}
-                  >
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className={`font-medium text-sm ${
-                        darkMode ? 'text-white' : 'text-gray-900'
-                      }`}>
-                        {project.title}
-                      </h4>
-                      <span className={`text-xs px-2 py-1 rounded-full ${
-                        darkMode 
-                          ? 'bg-orange-900 text-orange-300' 
-                          : 'bg-orange-100 text-orange-700'
-                      }`}>
-                        {project.status}
-                      </span>
+                {currentProjects.map((project, index) => {
+                  const isMultiRepo = Array.isArray(project.githubUrls);
+
+                  return (
+                    <div
+                      key={index}
+                      onClick={
+                        !isMultiRepo
+                          ? () => window.open(project.githubUrls, "_blank")
+                          : undefined
+                      }
+                      className={`w-full p-4 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-md ${
+                        darkMode
+                          ? "bg-gray-700 hover:bg-gray-600 border border-gray-600"
+                          : "bg-gray-50 hover:bg-gray-100 border border-gray-200"
+                      } ${!isMultiRepo ? "cursor-pointer" : ""}`}
+                    >
+                      <div className="flex justify-between items-start mb-2">
+                        <h4
+                          className={`font-medium text-sm ${
+                            darkMode ? "text-white" : "text-gray-900"
+                          }`}
+                        >
+                          {project.title}
+                        </h4>
+                        <span
+                          className={`text-xs px-2 py-1 rounded-full ${
+                            darkMode
+                              ? "bg-orange-900 text-orange-300"
+                              : "bg-orange-100 text-orange-700"
+                          }`}
+                        >
+                          {project.status}
+                        </span>
+                      </div>
+                      <p
+                        className={`text-xs leading-relaxed ${
+                          darkMode ? "text-gray-400" : "text-gray-600"
+                        }`}
+                      >
+                        {project.description}
+                      </p>
+
+                      {/* Conditional GitHub links */}
+                      {isMultiRepo ? (
+                        <div className="flex flex-wrap gap-2 mt-3">
+                          {project.githubUrls.map((repo, i) => (
+                            <button
+                              key={i}
+                              onClick={(e) => {
+                                e.stopPropagation(); // prevent parent click
+                                window.open(repo.url, "_blank");
+                              }}
+                              className={`text-xs px-2 py-1 rounded-md border transition-colors ${
+                                darkMode
+                                  ? "bg-gray-800 hover:bg-gray-700 text-gray-300 border-gray-600"
+                                  : "bg-white hover:bg-gray-100 text-gray-600 border-gray-300"
+                              }`}
+                            >
+                              {repo.label}
+                            </button>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="flex items-center justify-end mt-2">
+                          <span
+                            className={`text-xs ${
+                              darkMode ? "text-gray-500" : "text-gray-400"
+                            }`}
+                          >
+                            View on GitHub →
+                          </span>
+                        </div>
+                      )}
                     </div>
-                    <p className={`text-xs leading-relaxed ${
-                      darkMode ? 'text-gray-400' : 'text-gray-600'
-                    }`}>
-                      {project.description}
-                    </p>
-                    <div className="flex items-center justify-end mt-2">
-                      <span className={`text-xs ${
-                        darkMode ? 'text-gray-500' : 'text-gray-400'
-                      }`}>
-                        View on GitHub →
-                      </span>
-                    </div>
-                  </button>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
