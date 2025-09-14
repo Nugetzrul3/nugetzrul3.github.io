@@ -171,6 +171,17 @@ export const projects = [
     ]
   },
   {
+    title: "CryptoTipper-MC",
+    category: ["Open Source", "Plugin Development", "Cryptocurrency", "Fintech"],
+    technologies: ["Java", "Spigot API", "Gradle", "PostgreSQL", "Bitcoin APIs"],
+    githubUrl: "https://github.com/Nugetzrul3/CryptoTipper-MC",
+    details: [
+      "Developed a Minecraft server plugin enabling Bitcoin and bitcoin-based cryptocurrency tipping directly within the game environment, originally based on AdventureCoin implementation.",
+      "Implemented comprehensive command system including /balance, /deposit, /withdraw, /tip, and /info commands with PostgreSQL database integration for persistent user data storage.",
+      "Created interactive sign functionality using PersistentDataContainer for ownership tracking, allowing players to create /bal, /pay, and /qwithdraw signs with proper access controls and permissions."
+    ]
+  },
+  {
     title: "TaskManager CLI",
     category: ["Open Source", "CLI Application"],
     technologies: ["Rust", "Serde", "JSON", "File I/O"],
