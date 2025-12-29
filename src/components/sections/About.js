@@ -154,7 +154,7 @@ const About = ({ darkMode }) => {
                             <button
                               key={i}
                               onClick={(e) => {
-                                e.stopPropagation(); // prevent parent click
+                                e.stopPropagation();
                                 window.open(repo.url, "_blank");
                               }}
                               className={`text-xs px-2 py-1 rounded-md border transition-colors ${
