@@ -61,7 +61,6 @@ const App = () => {
       </main>
       <Footer darkMode={darkMode} />
       
-      {/* Floating Dark Mode Toggle */}
       <FloatingToggle darkMode={darkMode} toggleDarkMode={() => setDarkMode(!darkMode)} />
     </div>
   );

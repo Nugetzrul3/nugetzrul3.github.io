@@ -38,7 +38,6 @@ const Skills = ({ darkMode }) => {
     <section className="space-y-12 animate-fadeIn">
       <h2 className="text-3xl font-bold text-center mb-8">Technical Skills</h2>
       
-      {/* Main Skill Categories */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {skillCategories.map((category) => (
           <div key={category.title} className={`${
@@ -64,7 +63,6 @@ const Skills = ({ darkMode }) => {
         ))}
       </div>
 
-      {/* Additional Skills */}
       <div className={`${
         darkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
       } shadow-lg rounded-xl p-8 border transition-all duration-300`}>

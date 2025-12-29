@@ -99,7 +99,6 @@ const About = ({ darkMode }) => {
               />
             </div>
 
-            {/* Currently Working On Section */}
             <div className="w-full max-w-80">
               <h3 className="text-lg font-semibold mb-3 flex items-center justify-center">
                 <span className="w-2 h-5 bg-orange-500 rounded-full mr-2"></span>
@@ -149,7 +148,6 @@ const About = ({ darkMode }) => {
                         {project.description}
                       </p>
 
-                      {/* Conditional GitHub links */}
                       {isMultiRepo ? (
                         <div className="flex flex-wrap gap-2 mt-3">
                           {project.githubUrls.map((repo, i) => (

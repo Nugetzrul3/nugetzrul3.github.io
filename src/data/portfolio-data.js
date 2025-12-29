@@ -34,7 +34,6 @@ export const certifications = [
   }
 ];
 
-// Add this new section for currently working projects
 export const currentProjects = [
   {
     title: "Cosmic Companion",
