@@ -36,26 +36,16 @@ export const certifications = [
 
 export const currentProjects = [
   {
-    title: "Cosmic Companion",
-    description: "A cross-platform app that uses NASA's APIs to fetch space content, built with React, React Native and Express + Apollo.",
-    githubUrls: [
-      { label: "Backend", url: "https://github.com/Nugetzrul3/cosmic-companion-backend" },
-      { label: "Web", url: "https://github.com/Nugetzrul3/cosmic-companion-web" },
-      { label: "Mobile", url: "https://github.com/Nugetzrul3/cosmic-companion-mobile" }
-    ],
-    status: "In Development"
-  },
-  {
-    title: "RustySync",
-    description: "A Rust-based file synchronization tool with real-time detection, hashing, and sync server built with Actix-web.",
-    githubUrls: "https://github.com/Nugetzrul3/RustySync",
+    title: "RibbitXDB Viewer",
+    description: "A simple, cross-platform database viewer for the RibbitXDB engine built with PySide6.",
+    githubUrls: "https://github.com/Nugetzrul3/ribbitxdb-viewer",
     status: "MVP Released"
   }
 ];
 
 export const skills = {
-  frameworks: ['FastAPI', 'SQLModel', 'SpringBoot', 'Flask', 'AWS Cloud Services', 'Bootstrap', 'ReactJS', 'NodeJS', 'Sequelize', 'Express', 'GraphQL', 'Actix-Web'],
-  languages: ['Python', 'Java', 'JavaScript', 'HTML/CSS', 'C++', 'SQL', 'Kotlin', 'Rust'],
+  frameworks: ['FastAPI', 'SQLModel', 'Flutter', 'SpringBoot', 'Flask', 'Bootstrap', 'ReactJS', 'Sequelize', 'Express', 'GraphQL', 'Actix-Web'],
+  languages: ['Salesforce Apex', 'Python', 'Dart', 'Java', 'JavaScript', 'HTML/CSS', 'C++', 'SQL', 'Kotlin', 'Rust'],
   architectures: ['MVVM', 'MVC', 'MERN', 'Microservices']
 };
 
@@ -90,9 +80,22 @@ export const navigation = [
 export const experiences = [
   {
     title: "Junior Software Engineer",
+    company: "Household Capital",
+    location: "Melbourn, Australia",
+    date: "Oct 2025 - Present",
+    details: [
+      "Developed custom Salesforce solutions including objects, metadata types, Apex classes, triggers, and comprehensive test suites to enhance CRM functionality while optimizing SOQL queries and maintaining governor limits for improved system performance.",
+      "Built and maintained AWS Lambda functions using Python frameworks (Falcon, FastAPI, Magnum) with robust pytest/unittest coverage, while managing cloud infrastructure as code through Terraform to provision and maintain scalable serverless architectures.",
+      "Used Buildkite to automate deployment workflows across environments, streamlining release processes and ensuring consistent application delivery through automated testing and validation.",
+      "Developed responsive Flutter components for customer portal with integrated unit testing, implementing clean and reusable UI patterns following best practices to enhance user experience and code maintainability.",
+      "Collaborated with cross-functional teams to gather requirements, troubleshoot production issues, and deliver solutions aligned with business objectives while participating in code reviews to maintain quality standards and foster team development."
+    ]
+  },
+  {
+    title: "Junior Software Engineer",
     company: "Freight Cyber",
     location: "Melbourne, Australia",
-    date: "Nov 2024 - Present",
+    date: "Nov 2024 - Oct 2025",
     details: [
       "Developing responsive web applications using ReactJS and Python backend services, expanding the FCX platform from mobile-first to full-stack web solutions, ensuring cross-platform compatibility and delivering seamless user experiences across desktop and mobile browsers.",
       "Built and maintained RESTful APIs using NodeJS, Sequelize and Express for both mobile and web applications, implementing robust authentication, data validation, and error handling to ensure reliable and fast communication between frontend applications and backend servers.",
@@ -158,6 +161,17 @@ export const projects = [
     ]
   },
   {
+    title: 'RibbitXDB Viewer',
+    category: ["Open Source", "GUI", "Database"],
+    technologies: ["Python", "PySide6", "RibbitXDB", "File I/O"],
+    githubUrl: "https://github.com/Nugetzrul3/ribbitxdb-viewer",
+    details: [
+      "Built a lightweight, cross-platform, user-friendly PySide6 GUI application to render database objects and data for the RibbitXDB engine",
+      "Implementing robust query editor with syntax highlighting to allow complex operations and helpful utilities for the purpose of DDL, DML and DCL operations",
+      "Utilised RibbitXDB engine to perform complex operations to return database schemas, views, indexes etc. as well as handling pagination of data",
+    ]
+  },
+  {
     title: "RustySync",
     category: ["Open Source", "Systems Programming"],
     technologies: ["Rust", "Actix-web", "SQLite", "File I/O", "Concurrency"],
@@ -167,17 +181,6 @@ export const projects = [
       "Implemented sub-100ms file change detection using Rust’s file watcher and ensured data integrity with content-based hashing (BLAKE3).",
       "Designed persistent state tracking with SQLite to allow accurate recovery and sync continuity after restarts.",
       "Developed a lightweight HTTP server with Actix-web to handle sync requests, supporting multi-client setups and future scalability."
-    ]
-  },
-  {
-    title: "CryptoTipper-MC",
-    category: ["Open Source", "Plugin Development", "Cryptocurrency", "Fintech"],
-    technologies: ["Java", "Spigot API", "Gradle", "PostgreSQL", "Bitcoin APIs"],
-    githubUrl: "https://github.com/Nugetzrul3/CryptoTipper-MC",
-    details: [
-      "Developed a Minecraft server plugin enabling Bitcoin and bitcoin-based cryptocurrency tipping directly within the game environment, originally based on AdventureCoin implementation.",
-      "Implemented comprehensive command system including /balance, /deposit, /withdraw, /tip, and /info commands with PostgreSQL database integration for persistent user data storage.",
-      "Created interactive sign functionality using PersistentDataContainer for ownership tracking, allowing players to create /bal, /pay, and /qwithdraw signs with proper access controls and permissions."
     ]
   },
   {

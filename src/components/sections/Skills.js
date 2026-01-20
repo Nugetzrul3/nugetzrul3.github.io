@@ -22,7 +22,7 @@ const Skills = ({ darkMode }) => {
     }
   ];
 
-  const additionalSkills = ['SQLModel', 'Sequelize', 'Docker', 'Git/GitHub', 'CI/CD', 'REST APIs', 'Database Design', 'Agile/Scrum', 'BurpSuite', 'Firebase', 'AWS EC2', 'GitHub Actions'];
+  const additionalSkills = ['AWS', 'Docker', 'Git/GitHub', 'VSCode', 'Jetbrains IDE', 'BurpSuite', 'Firebase', 'Salesforce CRM', 'NodeJS'];
 
   const getColorClasses = (color) => {
     const colors = {
