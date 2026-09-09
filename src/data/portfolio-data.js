@@ -34,14 +34,7 @@ export const certifications = [
   }
 ];
 
-export const currentProjects = [
-  {
-    title: "RibbitXDB Viewer",
-    description: "A simple, cross-platform database viewer for the RibbitXDB engine built with PySide6.",
-    githubUrls: "https://github.com/Nugetzrul3/ribbitxdb-viewer",
-    status: "MVP Released"
-  }
-];
+export const currentProjects = [];
 
 export const skills = {
   frameworks: ['FastAPI', 'SQLModel', 'Flutter', 'SpringBoot', 'Flask', 'Bootstrap', 'ReactJS', 'Sequelize', 'Express', 'GraphQL', 'Actix-Web'],
